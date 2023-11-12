@@ -49,8 +49,8 @@ class _TodoListPageState extends State<TodoListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Hive TODO List"),
-        backgroundColor: Colors.black,
+        title: const Text("ToDo List"),
+        backgroundColor: Colors.deepPurple,
       ),
       body: ValueListenableBuilder(
         valueListenable: Hive.box<TodoItem>('todoBox').listenable(),
@@ -79,13 +79,13 @@ class _TodoListPageState extends State<TodoListPage> {
         },
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.deepPurple,
         onPressed: () async {
           showDialog(
               context: context,
               builder: (context) {
                 return AlertDialog(
-                  title: Text('Add Todo'),
+                  title: Text('Add Item'),
                   content: TextField(
                     controller: _controller,
                   ),
